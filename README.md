@@ -24,5 +24,5 @@ Dies schont die Umwelt durch das sparen von Papier und erleichtert regelmäßige
 * [Github Pages](https://htl-leonding-project.github.io/questionz "Github Pages")
 
 
-## External Project Repository
+
 
