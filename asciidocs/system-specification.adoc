@@ -1,0 +1,85 @@
+= Quizzy
+1.0.0, yyyy-mm-dd: Some notes
+ifndef::imagesdir[:imagesdir: images]
+//:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
+:sourcedir: ../src/main/java
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+:toc: left
+
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+
+endif::backend-html5[]
+
+// print the toc here (not at the default position)
+//toc::[]
+
+== Pflichtenheft "Was mache ich"
+
+
+=== Ausgangssituation
+
+Schüler geben Lehrern Feedback zu ihrem Unterricht.
+
+=== Istzustand
+Bei uns an der Schule wird jedes Semester Feedback der Schulstunden von Lehrern auf Papierbögen eingeholt, welches immer von Lehrern
+oder Schülern ausgewertet werden müssen.
+
+
+=== Problemstellung
+Das Auswerten der Bögen dauert sehr lange und benötigt einen oder mehrere Personen je nach Teilnehmer und Größe der Umfrage.
+
+=== Aufgabenstellung
+Es soll eine Website erstellt werden die es Lehrern erlaubt leicht online Feedbackbögen zu erstellen welche automatisiert
+ausgewertet werden soll.
+
+==== Funktionale Anforderungen
+* Abwicklung von Umfragen und Feedbacks
+
+* Selbst Fragen erstellen
+
+* einfache Auswertung der Antworten
+
+==== Nichtfunktionale Anforderungen (NFA)
+* Login
+* Minimalistische Oberfläche
+
+
+=== Ziele
+* Höhere Teilnahmen an Schulweiten Umfragen
+
+* Mehr Mitspracherecht der Schüler, da das vereinfacht wird
+
+=== Mengengerüst
+Es gibt ca. 1.000 Schüler an unserer Schule und eine Klasse hat ca. 15 verschiedene Gegenstände.
+Wenn pro Jahr 3 Umfragen pro Gegenstand durchgeführt werden, sind das 45.000 Umfragen.
+
+=== Rahmenbedingungen
+* Quarkus Backend
+* Angular Frontend
+
+== Entwurf "Wie mache ich es"
+=== Systemarchitektur
+[plantuml,systemarchitektur,png]
+----
+@startuml
+    database Postgres
+    rectangle Keycloak
+    rectangle Quarkus
+    rectangle Traefik
+    rectangle nginx
+    rectangle Client
+
+
+
+    Postgres - Keycloak
+    Keycloak - Quarkus
+    Quarkus - Traefik
+    Traefik - nginx
+nginx - Client
+@enduml
+----
+* link:minutes-of-meeting.html[Protokollvorlage]
+* link:demo.html[Demo]
+
