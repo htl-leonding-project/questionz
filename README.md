@@ -3,7 +3,7 @@
 
 ## Project Description
 
-Quizzy ist eine Website auf der Feedbackbögen von Lehrern erstellt werden. Diese sollen dann von dessen Schülern ausgefüllt und dementsprechend automatisiert
+QuestionZ ist eine Website auf der Feedbackbögen von Lehrern erstellt werden. Diese sollen dann von dessen Schülern ausgefüllt und dementsprechend automatisiert
 ausgewertet werden.
 
 Dies schont die Umwelt durch das sparen von Papier und erleichtert regelmäßigere Feedbacks da sie einfacher auszuführen sind.
