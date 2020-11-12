@@ -1,4 +1,4 @@
-= Quizzy
+= questionZ
 1.0.0, yyyy-mm-dd: Some notes
 ifndef::imagesdir[:imagesdir: images]
 //:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
@@ -20,36 +20,53 @@ endif::backend-html5[]
 
 === Ausgangssituation
 
-Schüler geben Lehrern Feedback zu ihrem Unterricht.
+Die HTBLA Leonding ist eine Höhere Technische Lehranstalt in der Nähe von Linz.
+Der Ausbildungsschwerpunkt der ca. 1000 Schüler ist eine Grundausbildung in der
+Informatik mit verschiedenen Spezialisierungen.
 
 === Istzustand
-Bei uns an der Schule wird jedes Semester Feedback der Schulstunden von Lehrern auf Papierbögen eingeholt, welches immer von Lehrern
-oder Schülern ausgewertet werden müssen.
-
+An der Schule führen Lehrer jedes Semester Umfragen durch um herauszufinden
+wie sie ihren Unterricht verbessern können. Diese werden gerade noch auf
+Papierbögen ausgefüllt.
+Eine andere Möglichkeit ist das Umfragetool der Bundesregierung.
 
 === Problemstellung
-Das Auswerten der Bögen dauert sehr lange und benötigt einen oder mehrere Personen je nach Teilnehmer und Größe der Umfrage.
+Das Auswerten der Bögen dauert sehr lange und benötigt einen oder mehrere Personen je nach
+Teilnehmer und Größe der Umfrage.
+
+Wird das vorhin genannte Tool der Bundesregierung benutzt, bestehen
+Datenschutzbedenken.
 
 === Aufgabenstellung
-Es soll eine Website erstellt werden die es Lehrern erlaubt leicht online Feedbackbögen zu erstellen welche automatisiert
-ausgewertet werden soll.
+Es wird ein Softwaresystem erstellt, das es Lehrern erlaubt leicht online Feedbackbögen
+zu erstellen welche automatisiert ausgewertet werden soll.
 
 ==== Funktionale Anforderungen
-* Abwicklung von Umfragen und Feedbacks
+* Erstellung von Umfragen
+** Fragentypen
+*** Mehrfachfragen
+*** Einfachfragen
+*** Textfragen
+*** Ja-Nein-Fragen
 
-* Selbst Fragen erstellen
+* Durchführen von Umfragen
+** Beantworten der Fragen
+** TAN-Generierung für Schüler
 
-* einfache Auswertung der Antworten
+* Auswertung von Umfragen
+** visuelle Aufarbeitung der Ergebnisse
 
 ==== Nichtfunktionale Anforderungen (NFA)
-* Login
-* Minimalistische Oberfläche
-
+* Sicherheit
+* Effizienz
+* Usability
+* Portability
+* Robustheit
+* Benutzbarkeit
 
 === Ziele
-* Höhere Teilnahmen an Schulweiten Umfragen
-
-* Mehr Mitspracherecht der Schüler, da das vereinfacht wird
+* Vereinfachte und zeitsparende Meinungsforschung
+* Höhere Teilnehmerzahlen
 
 === Mengengerüst
 Es gibt ca. 1.000 Schüler an unserer Schule und eine Klasse hat ca. 15 verschiedene Gegenstände.
