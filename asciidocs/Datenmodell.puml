@@ -1,0 +1,15 @@
+@startuml
+
+class Survey
+class Question
+class User
+class Teacher
+class Student
+
+Survey --> Question
+User -left-> Teacher
+User --> Student
+Teacher -down-> Survey
+Student -left-> Survey
+
+@enduml
