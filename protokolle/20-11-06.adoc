@@ -1,0 +1,37 @@
+= Protokoll Fr, 06-11-2020
+
+Thema: Fehlerbesprechung
+
+Einheit: 4EH
+
+Uhrzeit: 11.xx
+
+==== Anwesend
+
+* BM
+* JF
+* Prof S
+* Prof P-I
+
+== Probleme
+* Mengengerüst
+* Systemarchitektur
+* GANTT
+
+== Abmachungen
+* Mengengerüst
+** Datenmenge die ca. gebraucht wird/Nutzung
+
+* Systemarchitektur
+** Schichtenarchitektur/Deploymentdiagram
+*** Quarkus
+*** nginx
+*** Postgres
+*** Traeffik
+*** KeyCloak
+
+* GANTT-Diagramm
+** weglassen
+
+* Marktforschung machen
+** Fragebogen mit Moodle
