@@ -1,0 +1,22 @@
+= Protokoll Do, 19-11-2020
+
+Thema: Besprechung Projekt
+
+Einheit: 5H
+
+Uhrzeit: 12:35
+
+==== Anwesend
+
+* BM
+* JF
+* TH
+* Prof S
+
+== Probleme
+* Keine Issues
+* Keine Milestones
+
+== Abmachungen
+* Issues erstellen
+* 3-5 Meilensteine
