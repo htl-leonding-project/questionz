@@ -2,9 +2,12 @@
 
 class Survey
 class Question
+class Questionniere
 class User
 class Teacher
 class Student
+class Answer
+
 
 Survey --> Question
 User -left-> Teacher

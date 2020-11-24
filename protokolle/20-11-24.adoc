@@ -1,0 +1,22 @@
+= Protokoll Di, 24-11-2020
+
+Thema: Vorgangsweise und Systemarchitektur
+
+Uhrzeit:19.30
+
+==== Anwesend
+* BM
+* TH
+* Stütz
+
+== Probleme
+* Wie machen wir weiter?
+
+
+== Abmachungen
+* Inspiration https://github.com/htl-leonding/javafx-jdbc-sql-studentfeedback
+* Tabelle erstellen für ausgewählte Antwort(en)
+* Enum für QuestionType (free/multiple/single/yes or no/...)
+* VM vom Sysadmin holen (Issue)
+* Vorerst ohne GUI arbeiten
+* Systemarchitektur aus Channel in PlantUML umwandeln

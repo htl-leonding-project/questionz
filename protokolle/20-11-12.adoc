@@ -1,0 +1,25 @@
+= Protokoll Do, 12-11-2020
+
+Thema: Besprechung Pflichtenheft
+
+Einheit: 3+4H (mit Prof A)
+
+Uhrzeit: 10.00
+
+==== Anwesend
+
+* BM
+* FJ
+* TH
+* Prof S
+
+== Probleme
+
+* Ausgangsituation und Istzustand falsch formuliert
+* Falsche Aufgabenstellung
+* Zu wenige Funktionale Anforderungen
+* Zu wenige & falsche NFA
+
+== Abmachungen
+* Fehler im Pflichtenheft korrigieren
+

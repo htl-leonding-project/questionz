@@ -1,0 +1,30 @@
+= Protokoll Do, 22-10-2020
+
+Thema: Besprechung Projektauftrag
+
+Einheit: 3+4H (mit Prof A)
+
+Uhrzeit: 10.50
+
+==== Anwesend
+
+* BM
+* TH
+* Prof S
+
+== Probleme
+
+* Was ist Library?
+* Was ist "Application auf Screen"?
+* Wirklich auf allen Screens gleichzeitig?
+* Kalenderdaten bei Projektstart und -ende
+
+== Abmachungen
+* Befriedigend auf Projektauftrag
+* ÄNDERUNG PROJEKT AUF FRAGEBOGEN!!!!
+
+== neues Projekt
+* Online Fragebogen
+* Angular und Quarkus
+* Fragebögen sollen selber zusammengestellt werden
+* neuen Projektantrag schreiben
