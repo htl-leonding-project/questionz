@@ -1,18 +1,80 @@
 @startuml
 
-class Survey
-class Question
-class Questionniere
-class User
-class Teacher
-class Student
-class Answer
+@startuml
 
+entity Answer{
+    int a_id
+    int a_t_id
+    int a_q_id
+    int a_s_id
+    String a_answer_text
+}
 
-Survey --> Question
-User -left-> Teacher
-User --> Student
-Teacher -down-> Survey
-Student -left-> Survey
+entity AnswerOption{
+    int ao_id
+    String ao_text
+    int ao_value
+    int ao_q_id
+}
+
+entity Question{
+    int q_id
+    String q_text
+    Blob q_image
+    QuestionType q_type
+    int q_qn_id
+}
+
+enum QuestionType{
+SINGLECHOICE,
+MULTIPLE CHOICE,
+CHECKBOX,
+FREETEXT
+}
+
+entity Questionnaire{
+     int qn_id
+     String qn_name
+     String qn_description
+}
+
+entity S_Transaction{
+     int t_id
+     String t_transactionscode
+     String t_password
+     boolean t_is_used
+     int t_s_id
+}
+
+entity Survey{
+     String s_t_id
+     int s_qn_id
+     LocalDate s_date
+     int a_id
+}
+
+entity ChosenOption {
+    int co_ao_id,
+    int co_a_id,
+    int co_q_id
+}
+
+entity Teacher {
+    int t_id,
+    String name
+}
+
+Teacher ||.down.|{ Survey
+Questionnaire ||.down.|{  Survey
+Survey }|.down.|| Answer
+Questionnaire ||.down.|{ Question
+Question ||.right.|{ Answer
+Question }|.down.|| AnswerOption
+Survey  ||.right.|{  S_Transaction
+S_Transaction ||..|{ Answer
+Answer ||..|{ ChosenOption
+AnswerOption ||..|{ ChosenOption
+
+@enduml
 
 @enduml
