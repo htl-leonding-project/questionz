@@ -6,7 +6,6 @@ entity Answer{
     int a_id
     int a_t_id
     int a_q_id
-    int a_s_id
     String a_answer_text
 }
 
@@ -14,6 +13,7 @@ entity AnswerOption{
     int ao_id
     String ao_text
     int ao_value
+    int ao_sequenceNumber
     int ao_q_id
 }
 
@@ -21,6 +21,7 @@ entity Question{
     int q_id
     String q_text
     Blob q_image
+    int q_sequenceNumber
     QuestionType q_type
     int q_qn_id
 }
@@ -66,7 +67,6 @@ entity Teacher {
 
 Teacher ||.down.|{ Survey
 Questionnaire ||.down.|{  Survey
-Survey }|.down.|| Answer
 Questionnaire ||.down.|{ Question
 Question ||.right.|{ Answer
 Question }|.down.|| AnswerOption
