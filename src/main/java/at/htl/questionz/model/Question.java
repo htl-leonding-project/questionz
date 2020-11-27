@@ -7,6 +7,7 @@ public class Question {
     private Long q_id;
     private String q_text;
     private Blob q_image;
+    private int q_sequenceNumber;
     private QuestionType q_type;
     private Questionnaire q_questionnaire;
 
@@ -14,10 +15,11 @@ public class Question {
 
     }
 
-    public Question(Long q_id, String q_text, Blob q_image, QuestionType q_type, Questionnaire q_questionnaire) {
+    public Question(Long q_id, String q_text, Blob q_image, int q_sequenceNumber, QuestionType q_type, Questionnaire q_questionnaire) {
         this.q_id = q_id;
         this.q_text = q_text;
         this.q_image = q_image;
+        this.q_sequenceNumber = q_sequenceNumber;
         this.q_type = q_type;
         this.q_questionnaire = q_questionnaire;
     }
@@ -44,6 +46,14 @@ public class Question {
 
     public void setQ_image(Blob q_image) {
         this.q_image = q_image;
+    }
+
+    public int getQ_sequenceNumber() {
+        return q_sequenceNumber;
+    }
+
+    public void setQ_sequenceNumber(int q_sequenceNumber) {
+        this.q_sequenceNumber = q_sequenceNumber;
     }
 
     public QuestionType getQ_type() {

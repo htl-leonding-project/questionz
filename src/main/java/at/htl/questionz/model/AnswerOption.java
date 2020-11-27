@@ -5,15 +5,17 @@ public class AnswerOption {
     private Long ao_id;
     private String ao_String;
     private int ao_value;
+    private int ao_sequenceNumber;
     private Question ao_question;
 
     public AnswerOption() {
     }
 
-    public AnswerOption(Long ao_id, String ao_String, int ao_value, Question ao_question) {
+    public AnswerOption(Long ao_id, String ao_String, int ao_value, int ao_sequenceNumber, Question ao_question) {
         this.ao_id = ao_id;
         this.ao_String = ao_String;
         this.ao_value = ao_value;
+        this.ao_sequenceNumber = ao_sequenceNumber;
         this.ao_question = ao_question;
     }
 
@@ -39,6 +41,14 @@ public class AnswerOption {
 
     public void setAo_value(int ao_value) {
         this.ao_value = ao_value;
+    }
+
+    public int getAo_sequenceNumber() {
+        return ao_sequenceNumber;
+    }
+
+    public void setAo_sequenceNumber(int ao_sequenceNumber) {
+        this.ao_sequenceNumber = ao_sequenceNumber;
     }
 
     public Question getAo_question() {
