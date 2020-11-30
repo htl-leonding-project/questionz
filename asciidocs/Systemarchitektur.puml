@@ -1,0 +1,35 @@
+@startuml
+
+rectangle Browser {
+    rectangle "Angular Client (runtime)"
+}
+
+rectangle Traefik
+
+Browser <-down- Traefik
+Browser -down-> Traefik
+
+package "docker-compose - network" {
+
+
+
+    rectangle Quarkus
+
+    rectangle Keycloak
+
+    database database
+
+    rectangle nginx {
+        rectangle "Angular Client (to be deployed)"
+    }
+
+}
+
+Traefik <-- Quarkus
+Traefik --> Quarkus
+
+Keycloak --> Browser
+Browser --> Keycloak
+nginx --> Browser
+
+@enduml

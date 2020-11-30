@@ -1,7 +1,5 @@
 @startuml
 
-@startuml
-
 entity Answer{
     int a_id
     int a_t_id
@@ -77,4 +75,3 @@ AnswerOption ||..|{ ChosenOption
 
 @enduml
 
-@enduml
