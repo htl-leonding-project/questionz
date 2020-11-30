@@ -90,11 +90,10 @@ Wenn pro Jahr 3 Umfragen pro Gegenstand durchgeführt werden, sind das 45.000 Um
 
 
 
-    Postgres - Keycloak
-    Keycloak - Quarkus
+    Postgres - Quarkus
     Quarkus - Traefik
     Traefik - nginx
-nginx - Client
+    nginx - Client
 @enduml
 ----
 * link:minutes-of-meeting.html[Protokollvorlage]

@@ -1,0 +1,80 @@
+@startuml
+
+@startuml
+
+entity Answer{
+    int a_id
+    int a_t_id
+    int a_q_id
+    String a_answer_text
+}
+
+entity AnswerOption{
+    int ao_id
+    String ao_text
+    int ao_value
+    int ao_sequenceNumber
+    int ao_q_id
+}
+
+entity Question{
+    int q_id
+    String q_text
+    Blob q_image
+    int q_sequenceNumber
+    QuestionType q_type
+    int q_qn_id
+}
+
+enum QuestionType{
+SINGLECHOICE,
+MULTIPLE CHOICE,
+CHECKBOX,
+FREETEXT
+}
+
+entity Questionnaire{
+     int qn_id
+     String qn_name
+     String qn_description
+}
+
+entity S_Transaction{
+     int t_id
+     String t_transactioncode
+     String t_password
+     boolean t_is_used
+     int s_id
+}
+
+entity Survey{
+     int s_id
+     int s_t_id
+     int s_qn_id
+     LocalDate s_date
+}
+
+entity ChosenOption {
+    int co_ao_id,
+    int co_a_id,
+    int co_q_id
+}
+
+entity Teacher {
+    int t_id,
+    String name
+}
+
+Teacher ||.down.|{ Survey
+Questionnaire ||.down.|{  Survey
+Questionnaire ||.down.|{ Question
+Question ||.right.|{ Answer
+Question }|.down.|| AnswerOption
+Survey  ||.right.|{  S_Transaction
+S_Transaction ||..|{ Answer
+Answer ||..|{ ChosenOption
+AnswerOption ||..|{ ChosenOption
+
+@enduml
+
+@enduml
