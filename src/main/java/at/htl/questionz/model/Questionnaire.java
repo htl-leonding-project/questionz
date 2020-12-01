@@ -1,50 +1,57 @@
 package at.htl.questionz.model;
 
+import javax.persistence.*;
+
+@Entity
 public class Questionnaire {
 
-    private Long qn_id;
-    private String qn_name;
-    private String qn_desc;
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "qn_id")
+    private Long id;
+    @Column(name = "qn_name")
+    private String name;
+    @Column(name = "qn_desc")
+    private String desc;
 
     public Questionnaire() {
     }
 
-    public Questionnaire(Long qn_id, String qn_name, String qn_desc) {
-        this.qn_id = qn_id;
-        this.qn_name = qn_name;
-        this.qn_desc = qn_desc;
+    public Questionnaire(Long id, String name, String desc) {
+        this.id = id;
+        this.name = name;
+        this.desc = desc;
     }
 
-    public Long getQn_id() {
-        return qn_id;
+    public Long getId() {
+        return id;
     }
 
-    public void setQn_id(Long qn_id) {
-        this.qn_id = qn_id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public String getQn_name() {
-        return qn_name;
+    public String getName() {
+        return name;
     }
 
-    public void setQn_name(String qn_name) {
-        this.qn_name = qn_name;
+    public void setName(String qn_name) {
+        this.name = qn_name;
     }
 
-    public String getQn_desc() {
-        return qn_desc;
+    public String getDesc() {
+        return desc;
     }
 
-    public void setQn_desc(String qn_desc) {
-        this.qn_desc = qn_desc;
+    public void setDesc(String qn_desc) {
+        this.desc = qn_desc;
     }
 
     @Override
     public String toString() {
         return "Questionnaire{" +
-                "qn_id=" + qn_id +
-                ", qn_name='" + qn_name + '\'' +
-                ", qn_desc='" + qn_desc + '\'' +
+                "qn_id=" + id +
+                ", qn_name='" + name + '\'' +
+                ", qn_desc='" + desc + '\'' +
                 '}';
     }
 }
