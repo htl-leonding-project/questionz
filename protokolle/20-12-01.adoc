@@ -1,0 +1,26 @@
+= Protokoll Di, 01.12.2020
+
+Thema: Besprechung ERD
+
+Uhrzeit: 17:00
+
+==== Anwesend
+* BM
+* FJ
+* TH
+* Prof S
+
+== Probleme
+* String im ERD
+* Keine Keys im ERD
+* Zusammengesetzter Primary Key falsch
+* QuestionType CHECKBOX überflüssig
+* Verbindung AnswerOption zu Question verkehrt
+
+== Abmachungen
+* ERD Verbessern
+* JPA Entities
+* QuestionType numerischer Wert
+* 3 Fragen aus Lehrerfragebogen als Unit-Test
+* Zukünftiger Schülerclient
+* TANs für User generieren
