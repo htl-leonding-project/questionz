@@ -1,77 +1,75 @@
 @startuml
 
 entity Answer{
-    int a_id
-    int a_t_id
-    int a_q_id
-    String a_answer_text
+    * **a_id: NUMBER**
+    * a_t_id: NUMBER
+    * a_q_id: NUMBER
+    a_answer_text: VARCHAR2
 }
 
 entity AnswerOption{
-    int ao_id
-    String ao_text
-    int ao_value
-    int ao_sequenceNumber
-    int ao_q_id
+    * **ao_id: NUMBER**
+    ao_text: VARCHAR2
+    ao_value: NUMBER
+    ao_sequenceNumber: NUMBER
 }
 
 entity Question{
-    int q_id
-    String q_text
-    Blob q_image
-    int q_sequenceNumber
-    QuestionType q_type
-    int q_qn_id
+    * **q_id: NUMBER**
+    q_text: VARCHAR2
+    q_image: BLOB
+    q_sequenceNumber: NUMBER
+    q_type: NUMBER
+    * q_qn_id: NUMBER
 }
 
 enum QuestionType{
 SINGLECHOICE,
 MULTIPLE CHOICE,
-CHECKBOX,
 FREETEXT
 }
 
 entity Questionnaire{
-     int qn_id
-     String qn_name
-     String qn_description
+     * **qn_id: NUMBER**
+     qn_name: VARCHAR2
+     qn_description: VARCHAR2
 }
 
-entity S_Transaction{
-     int t_id
-     String t_transactioncode
-     String t_password
-     boolean t_is_used
-     int s_id
+entity Transaction{
+     * **t_id: NUMBER**
+     t_transactioncode: VARCHAR2
+     t_password: VARCHAR2
+     t_is_used: BOOLEAN
+     * s_id: NUMBER
 }
 
 entity Survey{
-     int s_id
-     int s_t_id
-     int s_qn_id
-     LocalDate s_date
+     * **s_id: NUMBER**
+     * s_t_id: NUMBER
+     s_qn_id: NUMBER
+     s_date: DATETIME
 }
 
 entity ChosenOption {
-    int co_ao_id,
-    int co_a_id,
-    int co_q_id
+    *  **co_ao_id: NUMBER**
+    * **co_a_id: NUMBER**
 }
 
 entity Teacher {
-    int t_id,
-    String name
+    * **t_id: NUMBER**
+    t_name: VARCHAR2
 }
 
 Teacher ||.down.|{ Survey
 Questionnaire ||.down.|{  Survey
 Questionnaire ||.down.|{ Question
 Question ||.right.|{ Answer
-Question }|.down.|| AnswerOption
-Survey  ||.right.|{  S_Transaction
-S_Transaction ||..|{ Answer
+Question ||.down.|{ AnswerOption
+Survey  ||.right.|{  Transaction
+Transaction ||..|{ Answer
 Answer ||..|{ ChosenOption
 AnswerOption ||..|{ ChosenOption
+AnswerOption .left. QuestionType
 
 @enduml
 
