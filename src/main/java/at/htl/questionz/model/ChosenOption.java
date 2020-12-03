@@ -1,10 +1,16 @@
 package at.htl.questionz.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+@Entity
 public class ChosenOption {
 
+    //TODO: JPA FOREIGN KEYS
+    @Column(name = "co_answerOption")
     private AnswerOption co_answerOption;
+    @Column(name = "co_answer")
     private Answer co_answer;
-    private Question co_question = co_answerOption.getAo_question();
 
     public ChosenOption() {
     }
