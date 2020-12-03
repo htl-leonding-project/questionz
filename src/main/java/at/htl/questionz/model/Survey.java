@@ -1,63 +1,72 @@
 package at.htl.questionz.model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
 public class Survey {
 
-    private Long s_id;
-    private LocalDate s_date;
-    private Teacher s_teacher;
-    private Questionnaire s_questionnaire;
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "s_id")
+    private Long id;
+    @Column(name = "s_date")
+    private LocalDate date;
+
+    //TODO JPA FOREIGN KEYS
+    @Column(name = "s_teacher")
+    private Teacher teacher;
+    @Column(name = "s_questionnaire")
+    private Questionnaire questionnaire;
 
     public Survey() {
     }
 
-    public Survey(Long s_id, LocalDate s_date, Teacher s_teacher, Questionnaire s_questionnaire) {
-        this.s_id = s_id;
-        this.s_date = s_date;
-        this.s_teacher = s_teacher;
-        this.s_questionnaire = s_questionnaire;
+    public Survey(Long id, LocalDate date, Teacher teacher, Questionnaire questionnaire) {
+        this.id = id;
+        this.date = date;
+        this.teacher = teacher;
+        this.questionnaire = questionnaire;
     }
 
-    public Long getS_id() {
-        return s_id;
+    public Long getId() {
+        return id;
     }
 
-    public void setS_id(Long s_id) {
-        this.s_id = s_id;
+    public void setId(Long s_id) {
+        this.id = s_id;
     }
 
-    public LocalDate getS_date() {
-        return s_date;
+    public LocalDate getDate() {
+        return date;
     }
 
-    public void setS_date(LocalDate s_date) {
-        this.s_date = s_date;
+    public void setDate(LocalDate s_date) {
+        this.date = s_date;
     }
 
-    public Teacher getS_teacher() {
-        return s_teacher;
+    public Teacher getTeacher() {
+        return teacher;
     }
 
-    public void setS_teacher(Teacher s_teacher) {
-        this.s_teacher = s_teacher;
+    public void setTeacher(Teacher s_teacher) {
+        this.teacher = s_teacher;
     }
 
-    public Questionnaire getS_questionnaire() {
-        return s_questionnaire;
+    public Questionnaire getQuestionnaire() {
+        return questionnaire;
     }
 
-    public void setS_questionnaire(Questionnaire s_questionnaire) {
-        this.s_questionnaire = s_questionnaire;
+    public void setQuestionnaire(Questionnaire s_questionnaire) {
+        this.questionnaire = s_questionnaire;
     }
 
     @Override
     public String toString() {
         return "Survey{" +
-                "s_id=" + s_id +
-                ", s_date=" + s_date +
-                ", s_teacher=" + s_teacher +
-                ", s_questionnaire=" + s_questionnaire +
+                "s_id=" + id +
+                ", s_date=" + date +
+                ", s_teacher=" + teacher +
+                ", s_questionnaire=" + questionnaire +
                 '}';
     }
 }
