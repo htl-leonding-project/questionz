@@ -1,14 +1,28 @@
 package at.htl.questionz.model;
 
+import javax.persistence.*;
 import java.sql.Blob;
 
+@Entity
 public class Question {
 
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "q_id")
     private Long q_id;
+    @Column(name = "q_text")
     private String q_text;
-    private Blob q_image;
+    @Column(name = "q_sequenceNumber")
     private int q_sequenceNumber;
+
+    //If Blob fails use byte array
+    @Lob
+    @Column(name = "q_image")
+    private Blob q_image;
+
+    //TODO JPA FOREIGN KEYS
+    @Column(name = "q_type")
     private QuestionType q_type;
+    @Column(name = "q_questionnaire")
     private Questionnaire q_questionnaire;
 
     public Question() {
