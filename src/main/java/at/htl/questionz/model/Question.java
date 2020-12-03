@@ -29,6 +29,14 @@ public class Question {
 
     }
 
+    public Question(String text, int sequenceNumber, Blob q_image, QuestionType q_type, Questionnaire q_questionnaire) {
+        this.text = text;
+        this.sequenceNumber = sequenceNumber;
+        this.q_image = q_image;
+        this.q_type = q_type;
+        this.q_questionnaire = q_questionnaire;
+    }
+
     public Question(Long id, String text, Blob q_image, int sequenceNumber, QuestionType q_type, Questionnaire q_questionnaire) {
         this.id = id;
         this.text = text;
