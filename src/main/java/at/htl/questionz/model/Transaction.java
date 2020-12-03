@@ -1,72 +1,83 @@
 package at.htl.questionz.model;
 
+import javax.persistence.*;
+
+@Entity
 public class Transaction {
 
-    private Long t_id;
-    private String t_code;
-    private String t_password;
-    private boolean t_isUsed;
-    private Survey t_survey;
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "t_id")
+    private Long id;
+    @Column(name = "t_code")
+    private String code;
+    @Column(name = "t_password")
+    private String password;
+    @Column(name = "t_isUsed")
+    private boolean isUsed;
+
+    //TODO JPA FOREIGN KEYS
+    @Column(name = "t_survey")
+    private Survey survey;
 
     public Transaction() {
     }
 
-    public Transaction(Long t_id, String t_code, String t_password, boolean t_isUsed, Survey t_survey) {
-        this.t_id = t_id;
-        this.t_code = t_code;
-        this.t_password = t_password;
-        this.t_isUsed = t_isUsed;
-        this.t_survey = t_survey;
+    public Transaction(Long id, String code, String password, boolean isUsed, Survey survey) {
+        this.id = id;
+        this.code = code;
+        this.password = password;
+        this.isUsed = isUsed;
+        this.survey = survey;
     }
 
-    public Long getT_id() {
-        return t_id;
+    public Long getId() {
+        return id;
     }
 
-    public void setT_id(Long t_id) {
-        this.t_id = t_id;
+    public void setId(Long t_id) {
+        this.id = t_id;
     }
 
-    public String getT_code() {
-        return t_code;
+    public String getCode() {
+        return code;
     }
 
-    public void setT_code(String t_code) {
-        this.t_code = t_code;
+    public void setCode(String t_code) {
+        this.code = t_code;
     }
 
-    public String getT_password() {
-        return t_password;
+    public String getPassword() {
+        return password;
     }
 
-    public void setT_password(String t_password) {
-        this.t_password = t_password;
+    public void setPassword(String t_password) {
+        this.password = t_password;
     }
 
-    public boolean isT_isUsed() {
-        return t_isUsed;
+    public boolean isIsUsed() {
+        return isUsed;
     }
 
-    public void setT_isUsed(boolean t_isUsed) {
-        this.t_isUsed = t_isUsed;
+    public void setIsUsed(boolean t_isUsed) {
+        this.isUsed = t_isUsed;
     }
 
-    public Survey getT_survey() {
-        return t_survey;
+    public Survey getSurvey() {
+        return survey;
     }
 
-    public void setT_survey(Survey t_survey) {
-        this.t_survey = t_survey;
+    public void setSurvey(Survey t_survey) {
+        this.survey = t_survey;
     }
 
     @Override
     public String toString() {
         return "Transaction{" +
-                "t_id=" + t_id +
-                ", t_code='" + t_code + '\'' +
-                ", t_password='" + t_password + '\'' +
-                ", t_isUsed=" + t_isUsed +
-                ", t_survey=" + t_survey +
+                "t_id=" + id +
+                ", t_code='" + code + '\'' +
+                ", t_password='" + password + '\'' +
+                ", t_isUsed=" + isUsed +
+                ", t_survey=" + survey +
                 '}';
     }
 }
