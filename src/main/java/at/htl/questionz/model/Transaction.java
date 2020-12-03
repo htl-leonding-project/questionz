@@ -22,6 +22,13 @@ public class Transaction {
     public Transaction() {
     }
 
+    public Transaction(String code, String password, boolean isUsed, Survey survey) {
+        this.code = code;
+        this.password = password;
+        this.isUsed = isUsed;
+        this.survey = survey;
+    }
+
     public Transaction(Long id, String code, String password, boolean isUsed, Survey survey) {
         this.id = id;
         this.code = code;
