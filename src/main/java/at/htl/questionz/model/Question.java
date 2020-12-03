@@ -8,11 +8,11 @@ public class Question {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "q_id")
-    private Long q_id;
+    private Long id;
     @Column(name = "q_text")
-    private String q_text;
+    private String text;
     @Column(name = "q_sequenceNumber")
-    private int q_sequenceNumber;
+    private int sequenceNumber;
 
     //If Blob fails use byte array
     @Lob
@@ -29,29 +29,29 @@ public class Question {
 
     }
 
-    public Question(Long q_id, String q_text, Blob q_image, int q_sequenceNumber, QuestionType q_type, Questionnaire q_questionnaire) {
-        this.q_id = q_id;
-        this.q_text = q_text;
+    public Question(Long id, String text, Blob q_image, int sequenceNumber, QuestionType q_type, Questionnaire q_questionnaire) {
+        this.id = id;
+        this.text = text;
         this.q_image = q_image;
-        this.q_sequenceNumber = q_sequenceNumber;
+        this.sequenceNumber = sequenceNumber;
         this.q_type = q_type;
         this.q_questionnaire = q_questionnaire;
     }
 
-    public Long getQ_id() {
-        return q_id;
+    public Long getId() {
+        return id;
     }
 
-    public void setQ_id(Long q_id) {
-        this.q_id = q_id;
+    public void setId(Long q_id) {
+        this.id = q_id;
     }
 
-    public String getQ_text() {
-        return q_text;
+    public String getText() {
+        return text;
     }
 
-    public void setQ_text(String q_text) {
-        this.q_text = q_text;
+    public void setText(String q_text) {
+        this.text = q_text;
     }
 
     public Blob getQ_image() {
@@ -62,12 +62,12 @@ public class Question {
         this.q_image = q_image;
     }
 
-    public int getQ_sequenceNumber() {
-        return q_sequenceNumber;
+    public int getSequenceNumber() {
+        return sequenceNumber;
     }
 
-    public void setQ_sequenceNumber(int q_sequenceNumber) {
-        this.q_sequenceNumber = q_sequenceNumber;
+    public void setSequenceNumber(int q_sequenceNumber) {
+        this.sequenceNumber = q_sequenceNumber;
     }
 
     public QuestionType getQ_type() {
@@ -89,8 +89,8 @@ public class Question {
     @Override
     public String toString() {
         return "Question{" +
-                "q_id=" + q_id +
-                ", q_text='" + q_text + '\'' +
+                "q_id=" + id +
+                ", q_text='" + text + '\'' +
                 ", q_image=" + q_image +
                 ", q_type=" + q_type +
                 ", q_questionnaire=" + q_questionnaire +
