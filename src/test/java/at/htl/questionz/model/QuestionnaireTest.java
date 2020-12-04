@@ -1,6 +1,6 @@
 package at.htl.questionz.model;
 
-import static org.junit.jupiter.api.Assertions.*;
+import at.htl.model.Questionnaire;
 
 class QuestionnaireTest {
     Questionnaire questionnaire = new Questionnaire();
