@@ -3,12 +3,14 @@ package at.htl.questionz.model;
 import at.htl.model.Questionnaire;
 import at.htl.model.Survey;
 import at.htl.model.Teacher;
+import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@QuarkusTest
 class SurveyTest {
 
     Teacher teacher = new Teacher("Max Mustermann");
