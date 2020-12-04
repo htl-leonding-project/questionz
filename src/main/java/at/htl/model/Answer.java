@@ -1,11 +1,21 @@
-package at.htl.questionz.model;
+package at.htl.model;
 
+import javax.persistence.*;
+
+@Entity
 public class Answer {
 
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "a_id")
     private Long a_id;
-    private Transaction a_transaction;
-    private Question a_question;
+    @Column(name = "a_text")
     private String a_text;
+
+    //TODO JPA FOREIGN KEYS
+    @Column(name = "a_transaction")
+    private Transaction a_transaction;
+    @Column(name = "a_question")
+    private Question a_question;
 
     public Answer() {
     }
