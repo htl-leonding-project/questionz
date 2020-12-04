@@ -1,13 +1,11 @@
 package at.htl.questionz.model;
 
 import at.htl.model.Teacher;
-import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@QuarkusTest
 class TeacherTest {
 
     Teacher teacher = new Teacher("Max Mustermann");
