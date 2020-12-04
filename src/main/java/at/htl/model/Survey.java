@@ -21,6 +21,12 @@ public class Survey {
     public Survey() {
     }
 
+    public Survey(LocalDate date, Teacher teacher, Questionnaire questionnaire) {
+        this.date = date;
+        this.teacher = teacher;
+        this.questionnaire = questionnaire;
+    }
+
     public Survey(Long id, LocalDate date, Teacher teacher, Questionnaire questionnaire) {
         this.id = id;
         this.date = date;

@@ -14,6 +14,10 @@ public class Teacher {
     public Teacher() {
     }
 
+    public Teacher(String name) {
+        this.name = name;
+    }
+
     public Teacher(Long id, String name) {
         this.id = id;
         this.name = name;
