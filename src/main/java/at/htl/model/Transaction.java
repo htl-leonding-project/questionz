@@ -13,7 +13,7 @@ public class Transaction {
     @Column(name = "t_password")
     private String password;
     @Column(name = "t_isUsed")
-    private boolean isUsed;
+    public boolean isUsed;
 
     //TODO JPA FOREIGN KEYS
     @Column(name = "t_survey")
