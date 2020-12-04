@@ -69,7 +69,7 @@ Survey  ||.right.|{  Transaction
 Transaction ||..|{ Answer
 Answer ||..|{ ChosenOption
 AnswerOption ||..|{ ChosenOption
-AnswerOption .left. QuestionType
+Question .left. QuestionType
 
 @enduml
 
