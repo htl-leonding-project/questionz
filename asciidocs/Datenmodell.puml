@@ -26,7 +26,8 @@ entity Question{
 enum QuestionType{
 SINGLECHOICE,
 MULTIPLE CHOICE,
-FREETEXT
+FREETEXT,
+NUMBER
 }
 
 entity Questionnaire{
