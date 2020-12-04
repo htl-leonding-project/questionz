@@ -1,16 +1,26 @@
 package at.htl.questionz.model;
 
+import javax.persistence.*;
+
+@Entity
 public class Answer {
 
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column("a_id")
     private Long a_id;
-    private Transaction a_transaction;
-    private Question a_question;
+    @Column("a_text")
     private String a_text;
+
+    //TODO JPA FOREIGN KEYS
+    @Column("a_transaction")
+    private Transaction a_transaction;
+    @Column("a_question")
+    private at.htl.questionz.model.Question a_question;
 
     public Answer() {
     }
 
-    public Answer(Long a_id, String a_text, Transaction a_transaction, Question a_question) {
+    public Answer(Long a_id, String a_text, Transaction a_transaction, at.htl.questionz.model.Question a_question) {
         this.a_id = a_id;
         this.a_text = a_text;
         this.a_transaction = a_transaction;
@@ -41,11 +51,11 @@ public class Answer {
         this.a_transaction = a_transaction;
     }
 
-    public Question getA_question() {
+    public at.htl.questionz.model.Question getA_question() {
         return a_question;
     }
 
-    public void setA_question(Question a_question) {
+    public void setA_question(at.htl.questionz.model.Question a_question) {
         this.a_question = a_question;
     }
 
