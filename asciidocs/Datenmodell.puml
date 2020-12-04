@@ -26,7 +26,8 @@ entity Question{
 enum QuestionType{
 SINGLECHOICE,
 MULTIPLE CHOICE,
-FREETEXT
+FREETEXT,
+NUMBER
 }
 
 entity Questionnaire{
@@ -69,7 +70,7 @@ Survey  ||.right.|{  Transaction
 Transaction ||..|{ Answer
 Answer ||..|{ ChosenOption
 AnswerOption ||..|{ ChosenOption
-AnswerOption .left. QuestionType
+Question .left. QuestionType
 
 @enduml
 
