@@ -51,11 +51,11 @@ public class Answer {
         this.transaction = a_transaction;
     }
 
-    public at.htl.questionz.model.Question getQuestion() {
+    public Question getQuestion() {
         return question;
     }
 
-    public void setQuestion(at.htl.questionz.model.Question a_question) {
+    public void setQuestion(Question a_question) {
         this.question = a_question;
     }
 
