@@ -1,4 +1,4 @@
-package at.htl.questionz.model;
+package at.htl.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
