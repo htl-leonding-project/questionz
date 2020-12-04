@@ -1,7 +1,9 @@
 package at.htl.questionz.model;
 
-import static org.junit.jupiter.api.Assertions.*;
+import at.htl.model.Answer;
 
 class AnswerTest {
+
+    Answer answer = new Answer();
 
 }
