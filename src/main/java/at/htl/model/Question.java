@@ -1,4 +1,4 @@
-package at.htl.questionz.model;
+package at.htl.model;
 
 import javax.persistence.*;
 import java.sql.Blob;
