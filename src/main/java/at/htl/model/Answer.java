@@ -20,6 +20,12 @@ public class Answer {
     public Answer() {
     }
 
+    public Answer(String a_text, Transaction a_transaction, Question a_question) {
+        this.a_text = a_text;
+        this.a_transaction = a_transaction;
+        this.a_question = a_question;
+    }
+
     public Answer(Long a_id, String a_text, Transaction a_transaction, Question a_question) {
         this.a_id = a_id;
         this.a_text = a_text;

@@ -22,6 +22,13 @@ public class AnswerOption {
     public AnswerOption() {
     }
 
+    public AnswerOption(String text, int value, int sequenceNumber, Question question) {
+        this.text = text;
+        this.value = value;
+        this.sequenceNumber = sequenceNumber;
+        this.question = question;
+    }
+
     public AnswerOption(Long id, String text, int value, int sequenceNumber, Question question) {
         this.id = id;
         this.text = text;

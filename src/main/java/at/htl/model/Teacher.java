@@ -14,6 +14,10 @@ public class Teacher {
     public Teacher() {
     }
 
+    public Teacher(String name) {
+        this.name = name;
+    }
+
     public Teacher(Long id, String name) {
         this.id = id;
         this.name = name;
@@ -35,6 +39,8 @@ public class Teacher {
         this.name = t_name;
     }
 
+
+    //TODO toString
     @Override
     public String toString() {
         return "Teacher{" +
