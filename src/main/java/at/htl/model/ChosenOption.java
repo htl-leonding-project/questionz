@@ -2,13 +2,18 @@ package at.htl.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class ChosenOption {
 
-    //TODO: JPA FOREIGN KEYS
+    @Id
+    @ManyToOne
     @Column(name = "co_answerOption")
     private AnswerOption answerOption;
+    @Id
+    @ManyToOne
     @Column(name = "co_answer")
     private Answer answer;
 
