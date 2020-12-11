@@ -11,10 +11,10 @@ public class Survey {
     private Long id;
     @Column(name = "s_date")
     private LocalDate date;
-
-    //TODO JPA FOREIGN KEYS
+    @ManyToOne
     @Column(name = "s_teacher")
     private Teacher teacher;
+    @ManyToOne
     @Column(name = "s_questionnaire")
     private Questionnaire questionnaire;
 
