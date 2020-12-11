@@ -3,6 +3,7 @@ package at.htl.questionz.model;
 import at.htl.model.Question;
 import at.htl.model.QuestionType;
 import at.htl.model.Questionnaire;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
 import javax.sql.rowset.serial.SerialBlob;
@@ -21,6 +22,7 @@ class QuestionTest {
     QuestionTest() throws SQLException {}
 
     @Test
+    @Order(10)
     void createQuestion_Test() throws SQLException {
         assertThat(question.getText()).isEqualTo("An diesem Lehrer gefällt mir...");
         assertThat(question.getSequenceNumber()).isEqualTo(1);

@@ -1,6 +1,7 @@
 package at.htl.questionz.model;
 
 import at.htl.model.*;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
 import javax.sql.rowset.serial.SerialBlob;
@@ -24,6 +25,7 @@ class AnswerTest {
     AnswerTest() throws SQLException {}
 
     @Test
+    @Order(10)
     void createAnswer_Test() {
         assertThat(answer.getText()).isEqualTo("Alles");
         assertThat(answer.getTransaction()).isEqualTo(transaction);
