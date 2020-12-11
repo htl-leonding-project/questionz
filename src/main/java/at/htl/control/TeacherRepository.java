@@ -15,6 +15,8 @@ public class TeacherRepository {
     public void add(Teacher newTeacher) {
         em.persist(newTeacher);
     }
+
+
     
 }
 
