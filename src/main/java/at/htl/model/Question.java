@@ -13,15 +13,13 @@ public class Question {
     private String text;
     @Column(name = "q_sequenceNumber")
     private int sequenceNumber;
-
     //If Blob fails use byte array
     @Lob
     @Column(name = "q_image")
     private Blob image;
-
-    //TODO JPA FOREIGN KEYS
     @Column(name = "q_type")
     private QuestionType type;
+    @ManyToOne
     @Column(name = "q_questionnaire")
     private Questionnaire questionnaire;
 
