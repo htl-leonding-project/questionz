@@ -14,8 +14,7 @@ public class AnswerOption {
     private int value;
     @Column(name = "ao_sequenceNumber")
     private int sequenceNumber;
-
-    //TODO: FOREIGN KEYS IN JPA
+    @ManyToOne
     @Column(name = "ao_question")
     private Question question;
 
