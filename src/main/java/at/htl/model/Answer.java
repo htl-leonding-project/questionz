@@ -12,6 +12,7 @@ public class Answer {
     private String text;
 
     //TODO JPA FOREIGN KEYS
+
     @Column(name = "a_transaction")
     private Transaction transaction;
     @Column(name = "a_question")
