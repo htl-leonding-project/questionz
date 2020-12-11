@@ -14,8 +14,7 @@ public class Transaction {
     private String password;
     @Column(name = "t_isUsed")
     public boolean isUsed;
-
-    //TODO JPA FOREIGN KEYS
+    @ManyToOne
     @Column(name = "t_survey")
     private Survey survey;
 
