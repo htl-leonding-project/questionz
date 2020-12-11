@@ -10,11 +10,10 @@ public class Answer {
     private Long id;
     @Column(name = "a_text")
     private String text;
-
-    //TODO JPA FOREIGN KEYS
-
+    @ManyToOne
     @Column(name = "a_transaction")
     private Transaction transaction;
+    @ManyToOne
     @Column(name = "a_question")
     private Question question;
 
