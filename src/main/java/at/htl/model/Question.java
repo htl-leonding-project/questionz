@@ -17,33 +17,33 @@ public class Question {
     //If Blob fails use byte array
     @Lob
     @Column(name = "q_image")
-    private Blob q_image;
+    private Blob image;
 
     //TODO JPA FOREIGN KEYS
     @Column(name = "q_type")
-    private QuestionType q_type;
+    private QuestionType type;
     @Column(name = "q_questionnaire")
-    private Questionnaire q_questionnaire;
+    private Questionnaire questionnaire;
 
     public Question() {
 
     }
 
-    public Question(String text, int sequenceNumber, Blob q_image, QuestionType q_type, Questionnaire q_questionnaire) {
+    public Question(String text, int sequenceNumber, Blob image, QuestionType type, Questionnaire questionnaire) {
         this.text = text;
         this.sequenceNumber = sequenceNumber;
-        this.q_image = q_image;
-        this.q_type = q_type;
-        this.q_questionnaire = q_questionnaire;
+        this.image = image;
+        this.type = type;
+        this.questionnaire = questionnaire;
     }
 
-    public Question(Long id, String text, Blob q_image, int sequenceNumber, QuestionType q_type, Questionnaire q_questionnaire) {
+    public Question(Long id, String text, Blob image, int sequenceNumber, QuestionType type, Questionnaire questionnaire) {
         this.id = id;
         this.text = text;
-        this.q_image = q_image;
+        this.image = image;
         this.sequenceNumber = sequenceNumber;
-        this.q_type = q_type;
-        this.q_questionnaire = q_questionnaire;
+        this.type = type;
+        this.questionnaire = questionnaire;
     }
 
     public Long getId() {
@@ -62,12 +62,12 @@ public class Question {
         this.text = q_text;
     }
 
-    public Blob getQ_image() {
-        return q_image;
+    public Blob getImage() {
+        return image;
     }
 
-    public void setQ_image(Blob q_image) {
-        this.q_image = q_image;
+    public void setImage(Blob q_image) {
+        this.image = q_image;
     }
 
     public int getSequenceNumber() {
@@ -78,20 +78,20 @@ public class Question {
         this.sequenceNumber = q_sequenceNumber;
     }
 
-    public QuestionType getQ_type() {
-        return q_type;
+    public QuestionType getType() {
+        return type;
     }
 
-    public void setQ_type(QuestionType q_type) {
-        this.q_type = q_type;
+    public void setType(QuestionType q_type) {
+        this.type = q_type;
     }
 
-    public Questionnaire getQ_questionnaire() {
-        return q_questionnaire;
+    public Questionnaire getQuestionnaire() {
+        return questionnaire;
     }
 
-    public void setQ_questionnaire(Questionnaire q_questionnaire) {
-        this.q_questionnaire = q_questionnaire;
+    public void setQuestionnaire(Questionnaire q_questionnaire) {
+        this.questionnaire = q_questionnaire;
     }
 
     @Override
@@ -99,9 +99,9 @@ public class Question {
         return "Question{" +
                 "q_id=" + id +
                 ", q_text='" + text + '\'' +
-                ", q_image=" + q_image +
-                ", q_type=" + q_type +
-                ", q_questionnaire=" + q_questionnaire +
+                ", q_image=" + image +
+                ", q_type=" + type +
+                ", q_questionnaire=" + questionnaire +
                 '}';
     }
 }
