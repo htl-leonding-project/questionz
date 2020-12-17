@@ -11,10 +11,10 @@ public class Answer {
     @Column(name = "a_text")
     private String text;
     @ManyToOne
-    @Column(name = "a_transaction")
+    @JoinColumn(name = "a_transaction")
     private Transaction transaction;
     @ManyToOne
-    @Column(name = "a_question")
+    @JoinColumn(name = "a_question")
     private Question question;
 
     public Answer() {
@@ -65,13 +65,5 @@ public class Answer {
         this.question = a_question;
     }
 
-    @Override
-    public String toString() {
-        return "Answer{" +
-                "a_id=" + id +
-                ", a_text='" + text + '\'' +
-                ", a_transaction=" + transaction +
-                ", a_question=" + question +
-                '}';
-    }
+
 }
