@@ -54,9 +54,9 @@ public class Questionnaire {
     @Override
     public String toString() {
         return "Questionnaire{" +
-                "qn_id=" + id +
-                ", qn_name='" + name + '\'' +
-                ", qn_desc='" + desc + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", desc='" + desc + '\'' +
                 '}';
     }
 }

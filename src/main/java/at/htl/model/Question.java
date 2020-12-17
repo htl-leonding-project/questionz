@@ -17,10 +17,13 @@ public class Question {
     @Lob
     @Column(name = "q_image")
     private Blob image;
-    @Column(name = "q_type")
+
+    //TODO JPA Enum
+    @Enumerated(EnumType.ORDINAL)
     private QuestionType type;
+
     @ManyToOne
-    @Column(name = "q_questionnaire")
+    @JoinColumn(name = "q_questionnaire")
     private Questionnaire questionnaire;
 
     public Question() {
@@ -95,11 +98,12 @@ public class Question {
     @Override
     public String toString() {
         return "Question{" +
-                "q_id=" + id +
-                ", q_text='" + text + '\'' +
-                ", q_image=" + image +
-                ", q_type=" + type +
-                ", q_questionnaire=" + questionnaire +
+                "id=" + id +
+                ", text='" + text + '\'' +
+                ", sequenceNumber=" + sequenceNumber +
+                ", image=" + image +
+                ", type=" + type +
+                ", questionnaire=" + questionnaire +
                 '}';
     }
 }

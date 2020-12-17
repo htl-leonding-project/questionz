@@ -16,6 +16,15 @@ public class TeacherRepository {
         em.persist(newTeacher);
     }
 
+    public void delete(Teacher teacher) {
+        em.remove(teacher);
+    }
+
+    public void update(Teacher teacher){
+        em.merge(teacher);
+    }
+
+
 
     
 }

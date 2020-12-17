@@ -15,7 +15,7 @@ public class Transaction {
     @Column(name = "t_isUsed")
     public boolean isUsed;
     @ManyToOne
-    @Column(name = "t_survey")
+    @JoinColumn(name = "t_survey")
     private Survey survey;
 
     public Transaction() {
@@ -79,11 +79,11 @@ public class Transaction {
     @Override
     public String toString() {
         return "Transaction{" +
-                "t_id=" + id +
-                ", t_code='" + code + '\'' +
-                ", t_password='" + password + '\'' +
-                ", t_isUsed=" + isUsed +
-                ", t_survey=" + survey +
+                "id=" + id +
+                ", code='" + code + '\'' +
+                ", password='" + password + '\'' +
+                ", isUsed=" + isUsed +
+                ", survey=" + survey +
                 '}';
     }
 }

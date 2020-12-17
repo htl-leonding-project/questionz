@@ -42,8 +42,8 @@ public class ChosenOption {
     @Override
     public String toString() {
         return "ChosenOption{" +
-                "co_answerOption=" + answerOption +
-                ", co_answer=" + answer +
+                "answerOption=" + answerOption +
+                ", answer=" + answer +
                 '}';
     }
 }
