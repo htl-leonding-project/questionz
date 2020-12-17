@@ -1,0 +1,97 @@
+@startuml
+
+class Teacher {
+- Long id
+- String name
+
++ Long getId()
++ void setId()
++ String getName()
++ void setName()
+}
+
+class Survey {
+- Long id
+- LocalDate date
+- Teacher teacher
+- Questionnaire questionnaire
+
++ Long getId()
++ void setId()
++ LocalDate getDate()
++ void getDate()
++ Teacher getTeacher()
++ void setTeacher()
++ Questionnaire getQuestionnaire()
++ void setQuestionnaire()
+}
+
+class Questionnaire {
+- Long id
+- String name
+- String desc
+
++ Long getId()
++ void setId()
++ String getName()
++ void setName()
++ String getDesc()
++ void setDesc()
+}
+
+class Question {
+- Long id
+- String text
+- int sequenceNumber
+- Blob image
+- Questionnaire questionnaire
+
++ Long getId()
++ void setId()
++ String getText()
++ void setText()
++ int getSequenceNumber()
++ void setSequenceNumber()
++ Blob getImage()
++ void setImage()
++ Questionnaire getQuestionnaire()
++ void setQuestionnaire()
+}
+
+enum QuestionType {
+SINGLECHOICE
+MULTIPLECHOICE
+CHECKBOX
+FREETEXT
+}
+
+class AnswerOption {
+- Long id
+- String text
+- int value
+- int sequenceNumber
+- Question question
+
++ Long getId()
++ void setId()
++ String getText()
++ void setText()
++ int getSequenceNumber()
++ void setSequenceNumber()
++ Question getQuestion()
++ void setQuestion()
+}
+
+class ChosenOption {
+- AnswerOption answerOption
+- Answer answer
+
++ AnswerOption getAnswerOption()
++ void setAnswerOption()
++ Answer getAnswer()
++ void setAnswer()
+}
+
+
+
+@enduml
