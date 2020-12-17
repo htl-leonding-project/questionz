@@ -17,4 +17,10 @@ class QuestionnaireTest {
         assertThat(questionnaire.getName()).isEqualTo("Schüler zufriedenheit");
         assertThat(questionnaire.getDesc()).isEqualTo("In diesem Fragebogen wird die zufriedenheit der Schüler abgefragt.");
     }
+
+    @Test
+    @Order(20)
+    void toString_Test() {
+        assertThat(questionnaire.toString()).isEqualTo("Questionnaire{id=null, name='Schüler zufriedenheit', desc='In diesem Fragebogen wird die zufriedenheit der Schüler abgefragt.'}");
+    }
 }
