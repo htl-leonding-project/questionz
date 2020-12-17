@@ -15,7 +15,7 @@ public class Transaction {
     @Column(name = "t_isUsed")
     public boolean isUsed;
     @ManyToOne
-    @Column(name = "t_survey")
+    @JoinColumn(name = "t_survey")
     private Survey survey;
 
     public Transaction() {
