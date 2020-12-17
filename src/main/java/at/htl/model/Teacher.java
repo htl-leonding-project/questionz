@@ -40,12 +40,11 @@ public class Teacher {
     }
 
 
-    //TODO toString
     @Override
     public String toString() {
         return "Teacher{" +
-                "t_id=" + id +
-                ", t_name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 '}';
     }
 }

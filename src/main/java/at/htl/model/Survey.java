@@ -69,10 +69,10 @@ public class Survey {
     @Override
     public String toString() {
         return "Survey{" +
-                "s_id=" + id +
-                ", s_date=" + date +
-                ", s_teacher=" + teacher +
-                ", s_questionnaire=" + questionnaire +
+                "id=" + id +
+                ", date=" + date +
+                ", teacher=" + teacher +
+                ", questionnaire=" + questionnaire +
                 '}';
     }
 }
