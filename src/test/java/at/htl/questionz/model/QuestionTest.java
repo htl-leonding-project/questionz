@@ -30,4 +30,10 @@ class QuestionTest {
         assertThat(question.getType()).isEqualTo(QuestionType.FREETEXT);
         assertThat(question.getQuestionnaire()).isEqualTo(questionnaire);
     }
+
+    @Test
+    @Order(20)
+    void toString_Test() {
+        assertThat(question.toString()).isEqualTo("Question{id=null, text='An diesem Lehrer gefällt mir...', sequenceNumber=1, image=javax.sql.rowset.serial.SerialBlob@1c458e0, type=FREETEXT, questionnaire=Questionnaire{id=null, name='Schüler zufriedenheit', desc='In diesem Fragebogen wird die zufriedenheit der Schüler abgefragt.'}}");
+    }
 }
