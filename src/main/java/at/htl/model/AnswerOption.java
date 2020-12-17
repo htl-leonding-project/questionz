@@ -15,7 +15,7 @@ public class AnswerOption {
     @Column(name = "ao_sequenceNumber")
     private int sequenceNumber;
     @ManyToOne
-    @Column(name = "ao_question")
+    @JoinColumn(name = "ao_question")
     private Question question;
 
     public AnswerOption() {
