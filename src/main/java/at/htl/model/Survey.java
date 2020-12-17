@@ -12,10 +12,10 @@ public class Survey {
     @Column(name = "s_date")
     private LocalDate date;
     @ManyToOne
-    @Column(name = "s_teacher")
+    @JoinColumn(name = "s_teacher")
     private Teacher teacher;
     @ManyToOne
-    @Column(name = "s_questionnaire")
+    @JoinColumn(name = "s_questionnaire")
     private Questionnaire questionnaire;
 
     public Survey() {
@@ -69,10 +69,10 @@ public class Survey {
     @Override
     public String toString() {
         return "Survey{" +
-                "s_id=" + id +
-                ", s_date=" + date +
-                ", s_teacher=" + teacher +
-                ", s_questionnaire=" + questionnaire +
+                "id=" + id +
+                ", date=" + date +
+                ", teacher=" + teacher +
+                ", questionnaire=" + questionnaire +
                 '}';
     }
 }

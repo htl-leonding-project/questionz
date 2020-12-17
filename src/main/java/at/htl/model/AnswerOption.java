@@ -79,10 +79,11 @@ public class AnswerOption {
     @Override
     public String toString() {
         return "AnswerOption{" +
-                "ao_id=" + id +
-                ", ao_String='" + text + '\'' +
-                ", ao_value=" + value +
-                ", ao_question=" + question +
+                "id=" + id +
+                ", text='" + text + '\'' +
+                ", value=" + value +
+                ", sequenceNumber=" + sequenceNumber +
+                ", question=" + question +
                 '}';
     }
 }
