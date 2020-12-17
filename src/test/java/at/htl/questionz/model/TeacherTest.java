@@ -21,6 +21,6 @@ class TeacherTest {
     @Order(20)
     void toString_Test() {
         //assert
-        assertThat(teacher.toString()).isEqualTo("");
+        assertThat(teacher.toString()).isEqualTo("Teacher{id=null, name='Max Mustermann'}");
     }
 }
