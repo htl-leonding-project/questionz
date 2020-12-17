@@ -31,4 +31,10 @@ class AnswerTest {
         assertThat(answer.getTransaction()).isEqualTo(transaction);
         assertThat(answer.getQuestion()).isEqualTo(question);
     }
+
+    @Test
+    @Order(20)
+    void toString_Test() {
+        assertThat(answer.toString()).isEqualTo("Answer{id=null, text='Alles', transaction=Transaction{id=null, code='code', password='password123', isUsed=false, survey=Survey{id=null, date=2020-08-01, teacher=Teacher{id=null, name='Max Mustermann'}, questionnaire=Questionnaire{id=null, name='Schüler zufriedenheit', desc='In diesem Fragebogen wird die zufriedenheit der Schüler abgefragt.'}}}, question=Question{id=null, text='An diesem Lehrer gefällt mir...', sequenceNumber=1, image=javax.sql.rowset.serial.SerialBlob@1c458e0, type=FREETEXT, questionnaire=Questionnaire{id=null, name='Schüler zufriedenheit', desc='In diesem Fragebogen wird die zufriedenheit der Schüler abgefragt.'}}}");
+    }
 }
