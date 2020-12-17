@@ -22,4 +22,10 @@ class SurveyTest {
         //assert
         assertThat(survey.getDate()).isEqualTo(LocalDate.of(2020, 8,1));
     }
+
+    @Test
+    @Order(20)
+    void toString_test() {
+        assertThat(survey.toString()).isEqualTo("Survey{id=null, date=2020-08-01, teacher=Teacher{id=null, name='Max Mustermann'}, questionnaire=Questionnaire{id=null, name='Schüler zufriedenheit', desc='In diesem Fragebogen wird die zufriedenheit der Schüler abgefragt.'}}");
+    }
 }
