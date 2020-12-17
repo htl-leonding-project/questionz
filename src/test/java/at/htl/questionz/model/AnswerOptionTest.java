@@ -1,15 +1,39 @@
 package at.htl.questionz.model;
 
 import at.htl.model.AnswerOption;
+import at.htl.model.Question;
+import at.htl.model.QuestionType;
+import at.htl.model.Questionnaire;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
+import javax.sql.rowset.serial.SerialBlob;
+import java.sql.Blob;
+import java.sql.SQLException;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
 class AnswerOptionTest {
+
+    byte[] byteArray = {1, 2, 3};
+    Blob blob = new SerialBlob(byteArray);
+    Questionnaire questionnaire = new Questionnaire("Schüler zufriedenheit", "In diesem Fragebogen wird die zufriedenheit der Schüler abgefragt.");
+    Question question = new Question("An diesem Lehrer gefällt mir...", 1, blob, QuestionType.FREETEXT, questionnaire);
+    String text = "Ich denke, dieser Lehrer kennt mich persönlich schon sehr gut, sowohl in meinen Stärken wie in meinen Schwächen";
+    int value = 1;
+    int sequenceNumber = 2;
+    AnswerOption answerOption = new AnswerOption(text, value, sequenceNumber, question);
+
+    AnswerOptionTest() throws SQLException {
+    }
 
     @Test
     @Order(10)
     void createAnswerOption_Test() {
-        String text = "Ich denke, dieser Lehrer kennt mich persönlich schon sehr gut, sowohl in meinen Stärken wie in meinen Schwächen";
-        AnswerOption answerOption = new AnswerOption();
+        assertThat(answerOption.getText()).isEqualTo(text);
+        assertThat(answerOption.getValue()).isEqualTo(value);
+        assertThat(answerOption.getSequenceNumber()).isEqualTo(sequenceNumber);
+        assertThat(answerOption.getQuestion()).isEqualTo(question);
     }
+
 }
