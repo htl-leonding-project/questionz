@@ -26,9 +26,11 @@ public class TeacherRepository {
     }
 
     public List<Teacher> findAll(Teacher teacher) {
+
         return em
                 .createNamedQuery("Teacher.findAll", Teacher.class)
                 .getResultList();
+
     }
 
     
