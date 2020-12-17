@@ -1,20 +1,17 @@
 package at.htl.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 public class ChosenOption {
 
     @Id
     @ManyToOne
-    @Column(name = "co_answerOption")
+    @JoinColumn(name = "co_answerOption")
     private AnswerOption answerOption;
     @Id
     @ManyToOne
-    @Column(name = "co_answer")
+    @JoinColumn(name = "co_answer")
     private Answer answer;
 
     public ChosenOption() {
