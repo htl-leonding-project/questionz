@@ -36,4 +36,9 @@ class AnswerOptionTest {
         assertThat(answerOption.getQuestion()).isEqualTo(question);
     }
 
+    @Test
+    @Order(20)
+    void toString_Test() {
+        assertThat(answerOption.toString()).isEqualTo("AnswerOption{id=null, text='Ich denke, dieser Lehrer kennt mich persönlich schon sehr gut, sowohl in meinen Stärken wie in meinen Schwächen', value=1, sequenceNumber=2, question=Question{id=null, text='An diesem Lehrer gefällt mir...', sequenceNumber=1, image=javax.sql.rowset.serial.SerialBlob@1c458e0, type=FREETEXT, questionnaire=Questionnaire{id=null, name='Schüler zufriedenheit', desc='In diesem Fragebogen wird die zufriedenheit der Schüler abgefragt.'}}}");
+    }
 }
