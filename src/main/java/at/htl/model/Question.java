@@ -17,10 +17,13 @@ public class Question {
     @Lob
     @Column(name = "q_image")
     private Blob image;
-    @Column(name = "q_type")
+
+    //TODO JPA Enum
+    @Enumerated(EnumType.ORDINAL)
     private QuestionType type;
+
     @ManyToOne
-    @Column(name = "q_questionnaire")
+    @JoinColumn(name = "q_questionnaire")
     private Questionnaire questionnaire;
 
     public Question() {
