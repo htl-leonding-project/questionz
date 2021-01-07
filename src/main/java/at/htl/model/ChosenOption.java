@@ -6,6 +6,7 @@ import javax.persistence.*;
 @Table(name = "ChosenOption")
 public class ChosenOption {
 
+
     @Id
     @ManyToOne
     @JoinColumn(name = "co_answerOption")
