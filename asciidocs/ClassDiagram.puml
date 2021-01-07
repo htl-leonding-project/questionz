@@ -92,6 +92,49 @@ class ChosenOption {
 + void setAnswer()
 }
 
+class Answer {
+- Long id
+- String text
+- Transaction transaction
+- Question question
+
++ Long getId()
++ void setId()
++ String getText()
++ void setText()
++ Transaction getTransaction()
++ void setTransaction()
++ Question getQuestion()
++ void setQuestion()
+}
+
+class Transaction {
+- Long id
+- String code
+- String password
+- boolean isUsed
+- Survey survey
+
++ Long getId()
++ void setId()
++ String getCode()
++ void setName()
++ boolean getIsUsed()
++ void setIsUsed()
++ Survey getSurvey()
++ void setSurvey()
+
+}
+
+Teacher -down- Survey
+Survey -left- Questionnaire
+Questionnaire -- Question
+Question -left- QuestionType
+Question -- AnswerOption
+AnswerOption -right- ChosenOption
+ChosenOption  -right- Answer
+Answer -up- Transaction
+Survey -- Transaction
 
 
 @enduml
