@@ -2,7 +2,16 @@ package at.htl.model;
 
 import javax.persistence.*;
 
+@NamedQueries({
+
+        @NamedQuery(
+                name = "Transaction.findAll",
+                query = "select ta from Transaction ta"
+        )
+
+})
 @Entity
+@Table(name = "Transaction")
 public class Transaction {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)

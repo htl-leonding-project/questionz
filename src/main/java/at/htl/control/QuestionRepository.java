@@ -1,7 +1,6 @@
 package at.htl.control;
 
-import at.htl.model.Answer;
-import at.htl.model.Answer;
+import at.htl.model.Question;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -10,25 +9,24 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @ApplicationScoped
-public class AnswerRepository {
-    
+public class QuestionRepository {
+
     @Inject
     EntityManager em;
 
-
     @Transactional
-    public void delete(Answer answer) {
-        em.remove(answer);
+    public void delete(Question question) {
+        em.remove(question);
     }
 
     @Transactional
-    public void save(Answer answer){
-        em.merge(answer);
+    public void save(Question question){
+        em.merge(question);
     }
 
-    public List<Answer> findAll() {
+    public List<Question> findAll() {
         return em
-                .createNamedQuery("Answer.findAll", Answer.class)
+                .createNamedQuery("Question.findAll", Question.class)
                 .getResultList();
     }
 }
