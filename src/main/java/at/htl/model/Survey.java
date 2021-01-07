@@ -3,6 +3,14 @@ package at.htl.model;
 import javax.persistence.*;
 import java.time.LocalDate;
 
+@NamedQueries({
+
+        @NamedQuery(
+                name = "Answer.findAll",
+                query = "select a from Answer a"
+        )
+
+})
 @Entity
 @Table(name = "Survey")
 public class Survey {
