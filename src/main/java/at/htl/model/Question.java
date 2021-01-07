@@ -3,6 +3,14 @@ package at.htl.model;
 import javax.persistence.*;
 import java.sql.Blob;
 
+@NamedQueries({
+
+        @NamedQuery(
+                name = "Question.findAll",
+                query = "select q from Question q"
+        )
+
+})
 @Entity
 @Table(name = "Question")
 public class Question {
