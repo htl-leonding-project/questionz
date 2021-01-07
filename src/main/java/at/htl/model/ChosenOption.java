@@ -2,6 +2,14 @@ package at.htl.model;
 
 import javax.persistence.*;
 
+@NamedQueries({
+
+        @NamedQuery(
+                name = "ChosenOption.findAll",
+                query = "select co from ChosenOption co"
+        )
+
+})
 @Entity
 @Table(name = "ChosenOption")
 public class ChosenOption {
