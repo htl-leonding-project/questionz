@@ -15,16 +15,12 @@ public class TeacherRepository {
     EntityManager em;
 
     @Transactional
-    public void add(Teacher newTeacher) {
-        em.persist(newTeacher);
-    }
-
-    @Transactional
     public void delete(Teacher teacher) {
         em.remove(teacher);
     }
 
-    public void update(Teacher teacher){
+    @Transactional
+    public void save(Teacher teacher){
         em.merge(teacher);
     }
 
