@@ -3,7 +3,9 @@ package at.htl.model;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "ChosenOption")
 public class ChosenOption {
+
 
     @Id
     @ManyToOne
