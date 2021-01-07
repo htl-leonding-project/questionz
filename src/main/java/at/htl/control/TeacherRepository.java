@@ -24,7 +24,7 @@ public class TeacherRepository {
         em.merge(teacher);
     }
 
-    public List<Teacher> findAll(Teacher teacher) {
+    public List<Teacher> findAll() {
         return em
                 .createNamedQuery("Teacher.findAll", Teacher.class)
                 .getResultList();
