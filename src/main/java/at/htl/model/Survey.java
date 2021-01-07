@@ -6,8 +6,8 @@ import java.time.LocalDate;
 @NamedQueries({
 
         @NamedQuery(
-                name = "Answer.findAll",
-                query = "select a from Answer a"
+                name = "Survey.findAll",
+                query = "select s from Survey s"
         )
 
 })
