@@ -1,5 +1,7 @@
 package at.htl.model;
 
+import com.sun.xml.bind.v2.TODO;
+
 import javax.persistence.*;
 import java.sql.Blob;
 
@@ -27,8 +29,8 @@ public class Question {
     @Column(name = "q_image")
     private Blob image;
 
-    //TODO JPA Enum
-    @Enumerated(EnumType.ORDINAL)
+    //TODO change to lookup table
+
     private QuestionType type;
 
     @ManyToOne
