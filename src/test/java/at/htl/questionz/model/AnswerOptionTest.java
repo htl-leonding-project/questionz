@@ -32,7 +32,7 @@ class AnswerOptionTest {
     void createAnswerOption_Test() {
         assertThat(answerOption.getText()).isEqualTo(text);
         assertThat(answerOption.getValue()).isEqualTo(value);
-        assertThat(answerOption.getSequenceNumber()).isEqualTo(sequenceNumber);
+        assertThat(answerOption.getSeqNumber()).isEqualTo(sequenceNumber);
         assertThat(answerOption.getQuestion()).isEqualTo(question);
     }
 

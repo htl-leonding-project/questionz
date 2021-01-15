@@ -22,7 +22,7 @@ public class AnswerOption {
     @Column(name = "ao_value")
     private int value;
     @Column(name = "ao_sequenceNumber")
-    private int sequenceNumber;
+    private int seqNumber;
     @ManyToOne
     @JoinColumn(name = "ao_question")
     private Question question;
@@ -30,18 +30,18 @@ public class AnswerOption {
     public AnswerOption() {
     }
 
-    public AnswerOption(String text, int value, int sequenceNumber, Question question) {
+    public AnswerOption(String text, int value, int seqNumber, Question question) {
         this.text = text;
         this.value = value;
-        this.sequenceNumber = sequenceNumber;
+        this.seqNumber = seqNumber;
         this.question = question;
     }
 
-    public AnswerOption(Long id, String text, int value, int sequenceNumber, Question question) {
+    public AnswerOption(Long id, String text, int value, int seqNumber, Question question) {
         this.id = id;
         this.text = text;
         this.value = value;
-        this.sequenceNumber = sequenceNumber;
+        this.seqNumber = seqNumber;
         this.question = question;
     }
 
@@ -69,12 +69,12 @@ public class AnswerOption {
         this.value = ao_value;
     }
 
-    public int getSequenceNumber() {
-        return sequenceNumber;
+    public int getSeqNumber() {
+        return seqNumber;
     }
 
-    public void setSequenceNumber(int ao_sequenceNumber) {
-        this.sequenceNumber = ao_sequenceNumber;
+    public void setSeqNumber(int ao_sequenceNumber) {
+        this.seqNumber = ao_sequenceNumber;
     }
 
     public Question getQuestion() {
@@ -91,7 +91,7 @@ public class AnswerOption {
                 "id=" + id +
                 ", text='" + text + '\'' +
                 ", value=" + value +
-                ", sequenceNumber=" + sequenceNumber +
+                ", sequenceNumber=" + seqNumber +
                 ", question=" + question +
                 '}';
     }
