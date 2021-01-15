@@ -2,7 +2,7 @@ package at.htl.model;
 
 public enum QuestionType {
     SINGLECHOICE,
-    MULTIPLECOICE,
+    MULTIPLECHOICE,
     CHECKBOX,
     FREETEXT
 }
