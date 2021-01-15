@@ -1,0 +1,33 @@
+= Protokoll DO, 14.01.2021
+
+Thema: Besprechung Fortschritt
+
+Uhrzeit: 11:00
+
+==== Anwesend
+* BM
+* FJ
+* TH
+* Prof S
+* Prof A
+
+== Probleme
+* Tippfehler im Enum (MULTIPLECHOICE)
+* Enum statt Lookup table
+* Blob statt Image tabelle
+* Getter/Setter im CLD
+* CLD und ERD ungleiche Struktur
+* ERD sequenceNumber statt seqNo
+
+== Abmachungen
+* Tippfehler ausbessern
+* Lookup Table erstellen
+* Image tabelle erstellen
+* Unit Tests für Repos
+* Entity Assoziationen testen
+* toString() Methoden mit createDate in DB
+* Mapped Superclass/Embedded Class für createDate
+* Migrate database to postgres (für später)
+* Getter/Setter aus CLD löschen
+* CLD und ERD struktur anpassen
+* sequenceNumber im ERD umbenennen in seqNo
