@@ -25,7 +25,7 @@ class QuestionTest {
     @Order(10)
     void createQuestion_Test() throws SQLException {
         assertThat(question.getText()).isEqualTo("An diesem Lehrer gefällt mir...");
-        assertThat(question.getSequenceNumber()).isEqualTo(1);
+        assertThat(question.getSeqNumber()).isEqualTo(1);
         assertThat(question.getImage()).isEqualTo(new SerialBlob(byteArray));
         assertThat(question.getType()).isEqualTo(QuestionType.FREETEXT);
         assertThat(question.getQuestionnaire()).isEqualTo(questionnaire);

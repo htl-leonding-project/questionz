@@ -21,7 +21,7 @@ public class AnswerOption {
     private String text;
     @Column(name = "ao_value")
     private int value;
-    @Column(name = "ao_sequenceNumber")
+    @Column(name = "ao_seqNumber")
     private int seqNumber;
     @ManyToOne
     @JoinColumn(name = "ao_question")

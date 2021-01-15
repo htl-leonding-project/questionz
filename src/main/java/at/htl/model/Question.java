@@ -20,8 +20,8 @@ public class Question {
     private Long id;
     @Column(name = "q_text")
     private String text;
-    @Column(name = "q_sequenceNumber")
-    private int sequenceNumber;
+    @Column(name = "q_seqNumber")
+    private int seqNumber;
     //If Blob fails use byte array
     @Lob
     @Column(name = "q_image")
@@ -39,19 +39,19 @@ public class Question {
 
     }
 
-    public Question(String text, int sequenceNumber, Blob image, QuestionType type, Questionnaire questionnaire) {
+    public Question(String text, int seqNumber, Blob image, QuestionType type, Questionnaire questionnaire) {
         this.text = text;
-        this.sequenceNumber = sequenceNumber;
+        this.seqNumber = seqNumber;
         this.image = image;
         this.type = type;
         this.questionnaire = questionnaire;
     }
 
-    public Question(Long id, String text, Blob image, int sequenceNumber, QuestionType type, Questionnaire questionnaire) {
+    public Question(Long id, String text, Blob image, int seqNumber, QuestionType type, Questionnaire questionnaire) {
         this.id = id;
         this.text = text;
         this.image = image;
-        this.sequenceNumber = sequenceNumber;
+        this.seqNumber = seqNumber;
         this.type = type;
         this.questionnaire = questionnaire;
     }
@@ -80,12 +80,12 @@ public class Question {
         this.image = q_image;
     }
 
-    public int getSequenceNumber() {
-        return sequenceNumber;
+    public int getSeqNumber() {
+        return seqNumber;
     }
 
-    public void setSequenceNumber(int q_sequenceNumber) {
-        this.sequenceNumber = q_sequenceNumber;
+    public void setSeqNumber(int q_sequenceNumber) {
+        this.seqNumber = q_sequenceNumber;
     }
 
     public QuestionType getType() {
@@ -109,7 +109,7 @@ public class Question {
         return "Question{" +
                 "id=" + id +
                 ", text='" + text + '\'' +
-                ", sequenceNumber=" + sequenceNumber +
+                ", sequenceNumber=" + seqNumber +
                 ", image=" + image +
                 ", type=" + type +
                 ", questionnaire=" + questionnaire +
