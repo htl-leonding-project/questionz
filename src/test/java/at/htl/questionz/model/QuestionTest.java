@@ -1,7 +1,6 @@
 package at.htl.questionz.model;
 
 import at.htl.model.Question;
-import at.htl.model.QuestionType;
 import at.htl.model.Questionnaire;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;

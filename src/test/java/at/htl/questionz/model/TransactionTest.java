@@ -26,4 +26,5 @@ class TransactionTest {
         assertThat(transaction.getPassword()).isEqualTo("password123");
         assertThat(transaction.isUsed).isEqualTo(false);
     }
+
 }
