@@ -23,7 +23,7 @@ class Questionnaire {
 class Question {
 - Long id
 - String text
-- int sequenceNumber
+- int seqNo
 - Blob image
 - Questionnaire questionnaire
 
@@ -40,7 +40,7 @@ class AnswerOption {
 - Long id
 - String text
 - int value
-- int sequenceNumber
+- int seqNo
 - Question question
 
 }

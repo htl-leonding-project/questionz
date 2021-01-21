@@ -18,16 +18,15 @@ entity Question{
     * **q_id: NUMBER**
     q_text: VARCHAR2
     q_image: BLOB
-    q_sequenceNumber: NUMBER
+    q_seqNo: NUMBER
     q_type: NUMBER
     * q_qn_id: NUMBER
 }
 
-enum QuestionType{
-SINGLECHOICE,
-MULTIPLE CHOICE,
-FREETEXT,
-NUMBER
+entity QuestionType{
+    qt_id: NUMBER
+    qt_name: VARCHAR2
+
 }
 
 entity Questionnaire{
@@ -62,15 +61,14 @@ entity Teacher {
 }
 
 Teacher ||.down.|{ Survey
-Questionnaire ||.down.|{  Survey
+Questionnaire ||.right.|{  Survey
 Questionnaire ||.down.|{ Question
-Question ||.right.|{ Answer
 Question ||.down.|{ AnswerOption
-Survey  ||.right.|{  Transaction
+Survey  ||.down.|{  Transaction
 Transaction ||..|{ Answer
-Answer ||..|{ ChosenOption
-AnswerOption ||..|{ ChosenOption
-Question .left. QuestionType
+Answer ||.left.|{ ChosenOption
+AnswerOption ||.right.|{ ChosenOption
+Question .right. QuestionType
 
 @enduml
 
