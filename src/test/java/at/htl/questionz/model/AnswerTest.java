@@ -18,7 +18,7 @@ class AnswerTest {
     Blob blob = new SerialBlob(byteArray);
     QuestionType questionType = new QuestionType(1L, "FREETEXT");
     Questionnaire questionnaire = new Questionnaire("Schüler zufriedenheit", "In diesem Fragebogen wird die zufriedenheit der Schüler abgefragt.");
-    Question question = new Question("An diesem Lehrer gefällt mir...", 1, blob, questionType.getMap(), questionnaire);
+    Question question = new Question("An diesem Lehrer gefällt mir...", 1, blob, questionType, questionnaire);
     Survey survey = new Survey(LocalDate.of(2020, 8,1), teacher, questionnaire);
     Transaction transaction = new Transaction("code", "password123", false, survey);
     Answer answer = new Answer("Alles", transaction, question);

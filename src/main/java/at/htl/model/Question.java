@@ -30,7 +30,8 @@ public class Question {
     private Blob image;
 
     //TODO change to lookup table
-
+    @ManyToOne
+    @JoinColumn(name = "q_type")
     private QuestionType type;
 
     @ManyToOne
@@ -90,8 +91,8 @@ public class Question {
         this.seqNumber = q_sequenceNumber;
     }
 
-    public QuestionType getType() {
-        return type;
+    public String getType(Long id) {
+        return type.getMap().get(id);
     }
 
     public void setType(QuestionType q_type) {

@@ -19,7 +19,7 @@ class AnswerOptionTest {
     Blob blob = new SerialBlob(byteArray);
     Questionnaire questionnaire = new Questionnaire("Schüler zufriedenheit", "In diesem Fragebogen wird die zufriedenheit der Schüler abgefragt.");
     QuestionType questionType = new QuestionType(1L, "FREETEXT");
-    Question question = new Question("An diesem Lehrer gefällt mir...", 1, blob, questionType.getMap(), questionnaire);
+    Question question = new Question("An diesem Lehrer gefällt mir...", 1, blob, questionType, questionnaire);
     String text = "Ich denke, dieser Lehrer kennt mich persönlich schon sehr gut, sowohl in meinen Stärken wie in meinen Schwächen";
     int value = 1;
     int sequenceNumber = 2;
