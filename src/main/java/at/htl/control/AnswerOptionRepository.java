@@ -25,7 +25,7 @@ public class AnswerOptionRepository {
         em.merge(answerOption);
     }
 
-    public List<Answer> findAll() {
+    public List<AnswerOption> findAll() {
         return em
                 .createNamedQuery("AnswerOption.findAll", AnswerOption.class)
                 .getResultList();

@@ -4,10 +4,6 @@ class Teacher {
 - Long id
 - String name
 
-+ Long getId()
-+ void setId()
-+ String getName()
-+ void setName()
 }
 
 class Survey {
@@ -16,27 +12,12 @@ class Survey {
 - Teacher teacher
 - Questionnaire questionnaire
 
-+ Long getId()
-+ void setId()
-+ LocalDate getDate()
-+ void getDate()
-+ Teacher getTeacher()
-+ void setTeacher()
-+ Questionnaire getQuestionnaire()
-+ void setQuestionnaire()
 }
 
 class Questionnaire {
 - Long id
 - String name
 - String desc
-
-+ Long getId()
-+ void setId()
-+ String getName()
-+ void setName()
-+ String getDesc()
-+ void setDesc()
 }
 
 class Question {
@@ -46,23 +27,13 @@ class Question {
 - Blob image
 - Questionnaire questionnaire
 
-+ Long getId()
-+ void setId()
-+ String getText()
-+ void setText()
-+ int getSequenceNumber()
-+ void setSequenceNumber()
-+ Blob getImage()
-+ void setImage()
-+ Questionnaire getQuestionnaire()
-+ void setQuestionnaire()
+
 }
 
-enum QuestionType {
-SINGLECHOICE
-MULTIPLECHOICE
-CHECKBOX
-FREETEXT
+class QuestionType {
+- Long id
+- String name
+- HashMap map
 }
 
 class AnswerOption {
@@ -72,24 +43,12 @@ class AnswerOption {
 - int sequenceNumber
 - Question question
 
-+ Long getId()
-+ void setId()
-+ String getText()
-+ void setText()
-+ int getSequenceNumber()
-+ void setSequenceNumber()
-+ Question getQuestion()
-+ void setQuestion()
 }
 
 class ChosenOption {
 - AnswerOption answerOption
 - Answer answer
 
-+ AnswerOption getAnswerOption()
-+ void setAnswerOption()
-+ Answer getAnswer()
-+ void setAnswer()
 }
 
 class Answer {
@@ -98,14 +57,6 @@ class Answer {
 - Transaction transaction
 - Question question
 
-+ Long getId()
-+ void setId()
-+ String getText()
-+ void setText()
-+ Transaction getTransaction()
-+ void setTransaction()
-+ Question getQuestion()
-+ void setQuestion()
 }
 
 class Transaction {
@@ -115,14 +66,6 @@ class Transaction {
 - boolean isUsed
 - Survey survey
 
-+ Long getId()
-+ void setId()
-+ String getCode()
-+ void setName()
-+ boolean getIsUsed()
-+ void setIsUsed()
-+ Survey getSurvey()
-+ void setSurvey()
 
 }
 
