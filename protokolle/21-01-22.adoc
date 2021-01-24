@@ -1,0 +1,23 @@
+= Protokoll Fr, 22.01.2021
+
+Thema: Projekt Präsentation
+
+Uhrzeit: 8:30
+
+==== Anwesend
+* BM
+* FJ
+* TH
+* Prof S
+
+== Probleme
+* Keine Multiplizität in CLD
+* Kein MethodOrderer in Tests
+
+== Abmachungen
+* Test schreiben mit Fragebogen erstellen
+* Das zusammenspiel der Klassen testen
+* Für jeden Anwendungsfall einen Test
+* Endpoint Tests
+* GUI Tests
+* setUp in Entity Tests
